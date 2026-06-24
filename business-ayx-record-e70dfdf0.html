@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资料整理与信息索引 | ayx 侧记</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f2f2f2;
+      font-family: 'Segoe UI', 'PingFang SC', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      color: #2c3e50;
+      padding: 2rem 1.2rem;
+    }
+
+    .page {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+      padding: 2.4rem 2.8rem;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .hero-card:hover {
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #1a2634;
+      margin-bottom: 0.6rem;
+      line-height: 1.2;
+    }
+
+    .subhead {
+      font-size: 1.05rem;
+      color: #5f6b7a;
+      border-left: 4px solid #b0c4d9;
+      padding-left: 1.2rem;
+      margin-top: 0.4rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .intro-text {
+      font-size: 1rem;
+      color: #3d4a5c;
+      margin-bottom: 1.8rem;
+      max-width: 90%;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .content-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      padding: 2rem 2.4rem;
+      border: 1px solid #eaeef2;
+    }
+
+    .content-card h2 {
+      font-size: 1.45rem;
+      font-weight: 500;
+      color: #1d2a38;
+      margin-bottom: 0.8rem;
+      border-bottom: 1px dashed #dce3ea;
+      padding-bottom: 0.4rem;
+    }
+
+    .content-card p {
+      margin-bottom: 1rem;
+    }
+
+    .content-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .quote-block {
+      background: #f7f9fc;
+      border-left: 4px solid #7f8c9b;
+      padding: 1rem 1.6rem;
+      margin: 1.6rem 0;
+      border-radius: 0 10px 10px 0;
+      font-style: normal;
+      color: #2f4052;
+      font-size: 0.97rem;
+    }
+
+    .quote-block strong {
+      color: #1d2a38;
+    }
+
+    .hint {
+      font-size: 0.95rem;
+      background: #e9edf2;
+      padding: 0.8rem 1.2rem;
+      border-radius: 30px;
+      display: inline-block;
+      color: #2b3e55;
+      margin: 0.4rem 0 1rem;
+    }
+
+    .faq-mini {
+      margin-top: 0.8rem;
+      background: #fafbfc;
+      border-radius: 12px;
+      padding: 1.2rem 1.6rem;
+      border: 1px solid #e6ecf2;
+    }
+
+    .faq-mini dt {
+      font-weight: 500;
+      color: #1e2c3a;
+      margin-bottom: 0.25rem;
+    }
+
+    .faq-mini dd {
+      margin-left: 0;
+      margin-bottom: 0.8rem;
+      color: #445566;
+    }
+
+    .faq-mini dd:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .visit-line {
+      margin: 1.8rem 0 0.6rem;
+      font-size: 1rem;
+      background: #edf2f8;
+      padding: 0.9rem 1.6rem;
+      border-radius: 40px;
+      display: inline-block;
+      border: 1px solid #d6e0ea;
+    }
+
+    .visit-line a {
+      color: #1f4a7a;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted #7f9bc0;
+    }
+
+    .visit-line a:hover {
+      border-bottom: 2px solid #1f4a7a;
+      color: #0b2b4a;
+    }
+
+    .footer-note {
+      margin-top: 2.4rem;
+      text-align: center;
+      color: #8b9aa8;
+      font-size: 0.85rem;
+      border-top: 1px solid #dce2e9;
+      padding-top: 1.8rem;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1.2rem 0.9rem;
+      }
+
+      .hero-card {
+        padding: 1.6rem 1.4rem;
+      }
+
+      .content-card {
+        padding: 1.4rem 1.2rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .intro-text {
+        max-width: 100%;
+      }
+
+      .visit-line {
+        display: block;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="hero-card">
+      <h1>资料整理·信息索引</h1>
+      <div class="subhead">从碎片到脉络，从分类到检索</div>
+      <p class="intro-text">
+        在信息过载的时代，如何让散落的知识被有效组织、快速定位，成为一项基础而持久的需求。<br>
+        以 <a href="https://business-ayx.com.cn" style="color:#1f4a7a; text-decoration:underline; font-weight:500;">ayx</a> 为坐标，我们梳理了面向日常资料管理的若干思路——不追求大而全，只希望提供可落地的索引框架与整理意识。
+      </p>
+    </div>
+
+    <div class="card-grid">
+      <div class="content-card">
+        <h2>为什么需要索引式整理？</h2>
+        <p>
+          大多数人每天会接触数十条信息片段：文档片段、网页书签、笔记摘录、项目备注……如果只依靠记忆或简单的文件夹分类，后续回溯的成本会越来越高。索引思维的核心，是让每一份内容都拥有一个可被定位的“坐标”——无论是标签、编号，还是上下文关联。
+        </p>
+        <p>
+          一个实用的资料库，往往不是建设出来的，而是整理出来的。整理的本质是建立关系：让同类内容彼此靠近，让不同层级的内容能被逐级展开。这种习惯一旦养成，资料的复用率会明显提升。
+        </p>
+        <div class="quote-block">
+          <strong>整理提示：</strong> 不必追求一次完成。每周花15分钟归类新增内容，比每月集中整理3小时更有效。索引的价值在于持续维护。
+        </div>
+      </div>
+
+      <div class="content-card">
+        <h2>从字段到结构：索引的层次</h2>
+        <p>
+          信息索引可以大致分为三个层级。第一层是<strong>原始信息</strong>本身——标题、摘要、来源；第二层是<strong>描述字段</strong>——时间戳、关键词、所属领域；第三层是<strong>关联网络</strong>——该信息与其他资料之间的引用、补充或对比关系。大多数人的整理停留在第一层，而真正高效的索引往往需要第二层和第三层的支撑。
+        </p>
+        <p>
+          以 <a href="https://business-ayx.com.cn">ayx</a> 所涉及的资料场景为例，一个包含日期、主题标签、原文链接和简短备注的索引条目，就能让后续检索效率提高数倍。不需要复杂的工具，一张简单的表格或一份纯文本清单就可以起步。
+        </p>
+      </div>
+
+      <div class="content-card">
+        <h2>场景举例：个人知识库的轻量搭建</h2>
+        <p>
+          假设你有一个文件夹，里面存放着过去一年收集的行业报告、技术文档和灵感笔记。按照传统做法，你可能会按类型建立三个子文件夹。但索引式做法是：为每份文件创建一个索引行，记录「文件名、日期、核心主题、关联文件编号」。之后只需一个搜索或排序，就能跨文件夹找到相关内容。
+        </p>
+        <p>
+          关键在于索引的可扩展性。当资料量增长到几百份时，只要索引结构保持一致，你依然可以在几秒内定位到任何一份。这也是为什么许多长期写作者或研究者会坚持使用<strong>索引卡片</strong>或<strong>结构化笔记</strong>的原因。
+        </p>
+        <div class="hint">
+          💡 小建议：索引条目最好包含一个“来源链接”字段，方便直接跳转原文。
+        </div>
+      </div>
+
+      <div class="content-card">
+        <h2>常见疑问与微调</h2>
+        <dl class="faq-mini">
+          <dt>Q：索引需要专门软件吗？</dt>
+          <dd>A：不需要。纯文本、Markdown、电子表格甚至纸质笔记本都可以。重要的是结构而非工具。</dd>
+          <dt>Q：如何决定哪些内容需要索引？</dt>
+          <dd>A：标准可以很灵活——凡是预计未来三个月内可能再次查阅的内容，都值得建立索引。其余可暂缓。</dd>
+          <dt>Q：索引条目要不要写摘要？</dt>
+          <dd>A：建议写一两句。摘要越精准，检索时越容易判断是否匹配当前需求。</dd>
+        </dl>
+        <p style="margin-top: 1rem;">
+          这些方法同样适用于团队协作场景。如果希望在一个统一的域名下集中管理资料索引，
+          <a href="https://business-ayx.com.cn">ayx</a> 提供了一个可参考的信息组织方式，帮助建立更清晰的资料结构。
+        </p>
+      </div>
+
+      <div class="content-card" style="background: #fafcfe;">
+        <div class="visit-line">
+          📂 更多关于资料索引与整理的讨论，可参考 <a href="https://business-ayx.com.cn">ayx</a> 的内容框架。
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.95rem; color: #495e74;">
+          索引不是目的，检索才是。好的整理习惯，可以让你在任何需要的时候，准确找到自己想要的那一条信息。
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      基于资料整理视角 · 索引与结构
+    </div>
+  </div>
+</body>
+</html>
