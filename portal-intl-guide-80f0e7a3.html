@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>500万彩票网 - 持续关注，常回来看看</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", "PingFang SC", Roboto, "Helvetica Neue", sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(145deg, #fce4c8 0%, #f9d3a3 40%, #f7c588 70%, #f5b86e 100%);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem 1.2rem;
+      line-height: 1.6;
+      color: #3e2b1f;
+    }
+
+    .page-card {
+      max-width: 880px;
+      width: 100%;
+      background: #fffef7;
+      border-radius: 36px;
+      box-shadow: 0 18px 40px rgba(120, 60, 20, 0.2);
+      padding: 2.8rem 2.4rem;
+      margin-top: 1.2rem;
+      margin-bottom: 2.8rem;
+      transition: box-shadow 0.2s;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.8rem; }
+      .page-card { padding: 2rem 1.2rem; border-radius: 28px; }
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: #e9cba3;
+      color: #3e2b1f;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 620;
+      color: #4f331b;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin: 0.3rem 0 0.8rem 0;
+    }
+
+    .sub-head {
+      font-size: 1.1rem;
+      color: #6f4f32;
+      margin-bottom: 1.8rem;
+      border-left: 5px solid #d9aa6e;
+      padding-left: 1rem;
+      font-weight: 380;
+    }
+
+    .intro-text {
+      background: #f9f3e7;
+      padding: 1.5rem 1.8rem;
+      border-radius: 24px;
+      margin: 1.8rem 0 2rem 0;
+      font-size: 1.05rem;
+    }
+
+    .intro-text p {
+      margin-bottom: 1rem;
+    }
+
+    .intro-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 2.2rem 0 2rem 0;
+    }
+
+    @media (max-width: 600px) {
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+    }
+
+    .feature-item {
+      background: #fffcf5;
+      border: 1px solid #eadbc7;
+      border-radius: 28px;
+      padding: 1.4rem 1.6rem;
+      transition: all 0.15s ease;
+    }
+
+    .feature-item:hover {
+      background: #fff7ec;
+      border-color: #d9aa6e;
+      box-shadow: 0 4px 12px rgba(170, 100, 30, 0.08);
+    }
+
+    .feature-item h3 {
+      font-size: 1.25rem;
+      font-weight: 550;
+      color: #543c28;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-item p {
+      color: #5e4531;
+      font-size: 0.95rem;
+    }
+
+    .usage-note {
+      background: #f2e5d4;
+      padding: 1.2rem 1.6rem;
+      border-radius: 24px;
+      margin: 1.5rem 0 1.8rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.8rem 1.2rem;
+    }
+
+    .usage-note span {
+      background: #fffcf5;
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 500;
+      color: #4f331b;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .usage-note .text {
+      flex: 1;
+      color: #4b3623;
+      font-size: 0.98rem;
+    }
+
+    .faq-block {
+      margin: 2.2rem 0 1.8rem 0;
+    }
+
+    .faq-block details {
+      margin-bottom: 0.9rem;
+      border-bottom: 1px solid #e5d5be;
+      padding-bottom: 0.6rem;
+    }
+
+    .faq-block summary {
+      font-weight: 550;
+      color: #4f331b;
+      cursor: pointer;
+      font-size: 1.02rem;
+      padding: 0.3rem 0;
+      list-style: none;
+    }
+
+    .faq-block summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-block summary::before {
+      content: "▸ ";
+      color: #cc9a60;
+      font-size: 1.1rem;
+      margin-right: 0.3rem;
+    }
+
+    .faq-block details[open] summary::before {
+      content: "▾ ";
+    }
+
+    .faq-block p {
+      color: #5e4531;
+      font-size: 0.95rem;
+      margin: 0.5rem 0 0.6rem 1.5rem;
+      padding-right: 0.5rem;
+    }
+
+    .link-sentence {
+      background: #f7ede0;
+      padding: 1.2rem 1.8rem;
+      border-radius: 40px;
+      margin: 1.8rem 0 0.5rem 0;
+      font-size: 1.05rem;
+      text-align: center;
+      border: 1px solid #e3cfb3;
+    }
+
+    .link-sentence a {
+      color: #8b5a2b;
+      background: #f9edd9;
+      padding: 0.2rem 0.8rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s, color 0.2s;
+      border: 1px solid #d9aa6e;
+      display: inline-block;
+      line-height: 1.5;
+    }
+
+    .link-sentence a:hover {
+      background: #d9aa6e;
+      color: #2f1e10;
+      border-color: #b8854a;
+    }
+
+    .footer-note {
+      font-size: 0.85rem;
+      color: #7a5f44;
+      text-align: center;
+      margin-top: 2.2rem;
+      border-top: 1px dashed #dac2a6;
+      padding-top: 1.2rem;
+      letter-spacing: 0.3px;
+    }
+
+    .refrain {
+      font-size: 0.78rem;
+      color: #9c7b5e;
+      margin-top: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-card">
+    <div class="hero-tag">📌 常回来看看 · 收藏此页</div>
+    <h1>500万彩票网<br>熟悉的位置，安心的陪伴</h1>
+    <div class="sub-head">再次访问，就像与老朋友重逢——每一次打开都从容自然。</div>
+
+    <div class="intro-text">
+      <p>如果你曾经收藏过 <strong>500万彩票网</strong>，或者只是偶然路过，那么现在正是重新关注它的好时机。这个站点始终保持着一种稳定、克制的节奏：没有喧闹的弹窗，也没有过度的催促，只是安静地提供与彩票相关的信息与参考。</p>
+      <p>无论你是出于好奇，还是已经有一段时间没有登录，再次输入那个熟悉的网址，页面上的内容会像以往一样清晰有序。它的设计始终围绕着“可读、可查、可参考”这三个词，不会让你感到陌生或突兀。</p>
+    </div>
+
+    <h2 style="font-weight: 540; color: #4f331b; font-size: 1.5rem; margin: 1rem 0 0.5rem 0;">亮点与节奏</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3>📋 信息摘要</h3>
+        <p>模块化展示开奖号码与走势，结构一目了然。你不需要反复寻找关键数据，页面已经把最常用的信息放在了顺手的位置。</p>
+      </div>
+      <div class="feature-item">
+        <h3>🔖 收藏即安放</h3>
+        <p>把 <strong>500万彩票网</strong> 加入浏览器收藏夹，就像在书桌上放一本常用的册子。下次想了解时，不必重新搜索，一点即达。</p>
+      </div>
+      <div class="feature-item">
+        <h3>⏳ 持续关注</h3>
+        <p>如果你习惯隔段时间看看变化，这个站点不会让你失望。它的更新规律，内容编排前后一致，适合长期留意。</p>
+      </div>
+      <div class="feature-item">
+        <h3>📎 低调实用</h3>
+        <p>没有夸张的旗帜，没有闪烁的按钮。一切以提供参考为核心，页面本身更像一个工具而不是广告牌。</p>
+      </div>
+    </div>
+
+    <div class="usage-note">
+      <span>💡 使用建议</span>
+      <div class="text">
+        将 <a href="https://portal-intl-500.com" style="color:#8b5a2b; font-weight:600; text-decoration: underline; text-underline-offset: 2px; background: transparent; padding: 0;">500万彩票网</a> 添加到浏览器书签栏，或设为常用标签页。之后每次想了解近期动态时，直接打开即可。不需要注册、登录或填写任何信息。
+      </div>
+    </div>
+
+    <div class="faq-block">
+      <details>
+        <summary>这个网站适合什么样的人？</summary>
+        <p>适合对彩票信息保持关注，但希望页面简洁、不被打扰的用户。无论是偶尔看一眼，还是阶段性查阅，都感到舒适。</p>
+      </details>
+      <details>
+        <summary>再次访问时有什么变化吗？</summary>
+        <p>整体结构和风格非常稳定。如果内容有调整，会以自然的方式体现在模块中，不会突然改变你的浏览习惯。</p>
+      </details>
+      <details>
+        <summary>需要记住复杂的地址吗？</summary>
+        <p>记住 <strong>500万彩票网</strong> 这个名称即可。你也可以通过收藏夹直接进入，省去输入网址的步骤。</p>
+      </details>
+    </div>
+
+    <div class="link-sentence">
+      <span style="display: inline-block;">如果你觉得这个介绍不错，不妨再次打开 </span>
+      <a href="https://portal-intl-500.com">500万彩票网</a>
+      <span style="display: inline-block;"> 看看，也许你会有新的发现。</span>
+    </div>
+
+    <div class="footer-note">
+      <div>一个可以安静关注的地方 · 信息参考，理性浏览</div>
+      <div class="refrain">本站仅提供信息展示，不构成任何建议。请保持适度关注。</div>
+    </div>
+  </div>
+</body>
+</html>
